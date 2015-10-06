@@ -1,8 +1,13 @@
 class Api::PostsController < ApplicationController
 
-  def index
-    @posts = Post.all.order("created_at desc")
-    render json: {posts: @posts}
+  before_action do
+    request.format = :json
   end
+
+  def index
+    @posts = Post.all.order("created_at desc").limit(50)
+    # render json: {posts: @posts}
+  end
+
 
 end

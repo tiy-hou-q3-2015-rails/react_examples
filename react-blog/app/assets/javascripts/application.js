@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require moment
+//= require marked
 //= require react
 //= require react_ujs
 //= require components

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'posts#index'
 
-  get "/api/posts" => 'api/posts#index'
+  get "api/posts" => 'api/posts#index'
+  get "posts/:id" => 'posts#show', as: :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
