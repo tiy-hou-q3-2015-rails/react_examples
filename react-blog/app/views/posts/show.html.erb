@@ -1,1 +1,1 @@
-<%= react_component 'Post', post: @post_json %>
+<%= react_component 'Post', PostSerializer.new(@post).to_json %>
