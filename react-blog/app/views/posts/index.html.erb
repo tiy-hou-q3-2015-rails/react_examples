@@ -1,0 +1,7 @@
+<h1>Posts#index</h1>
+
+<div class="text-right">
+  <%= react_component 'Clock' %>
+</div>
+
+<%= react_component 'Posts', {initialPosts: @posts}, {prerender: true} %>

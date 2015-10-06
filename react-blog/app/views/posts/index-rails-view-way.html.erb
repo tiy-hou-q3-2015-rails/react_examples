@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <h1><%= post.title %></h1>
+    <%= simple_format truncate(post.body, length: 300) %>
+  </div>
+<% end %>
