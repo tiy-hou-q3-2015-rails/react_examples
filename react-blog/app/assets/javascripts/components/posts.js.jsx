@@ -40,12 +40,7 @@ var Posts = React.createClass({
 
       {
         this.state.posts.map(function(post){
-          return <div className="post">
-            <h1>{post.title}</h1>
-            {post.body.substring(0,240).split("\n").map(function(paragraph){
-              return <p>{paragraph}</p>
-            })}
-          </div>
+          return <Post post={post} excerpt={true}></Post>
         })
       }
     </div>;

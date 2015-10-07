@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'posts#index'
 
-  get "/api/posts" => 'api/posts#index'
+  get "posts/:id" => 'posts#show', as: :post
+
+  # get "/api/posts" => 'api/posts#index'
+  # post "/api/posts/:id/comments" => 'api/comments#create', as: :comments
+
+  namespace :api do
+    get "posts" => 'posts#index'
+    post "posts/:id/comments" => 'comments#create', as: :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
