@@ -1,0 +1,49 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.app {
+  display: flex;
+
+}
+
+.rooms {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  width: 150px;
+}
+
+.messages {
+  padding: 2rem;
+  border: 1px solid #111111;
+  height: 300px;
+  overflow: scroll;
+  .message {
+    font-size: 2rem;
+    margin-top: 2rem;
+    cite {
+      color: #ccc;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+.message_form{
+  background: #111111;
+  padding: 3rem;
+  input[type='text'] {
+    padding: 2rem;
+    font-size: 2rem;
+    width: 50%;
+  }
+  button {
+    padding: 2rem;
+    font-size: 2rem;
+    background: green;
+    color: white;
+    border: 2px solid green;
+  }
+}
