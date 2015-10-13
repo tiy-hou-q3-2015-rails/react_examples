@@ -1,0 +1,18 @@
+<div class="box">
+  <strong>From</strong><br>
+  <%= @message.from_email %>
+</div>
+
+<div class="box">
+  <strong>Date Received</strong><br>
+  <%= distance_of_time_in_words @message.created_at, Time.now %> ago
+</div>
+
+<div class="box">
+  <strong>Subject</strong><br>
+  <%= @message.subject %>
+</div>
+
+<div class="big box">
+  <%= @message.body %>
+</div>
